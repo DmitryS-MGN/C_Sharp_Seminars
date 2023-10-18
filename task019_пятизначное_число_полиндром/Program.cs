@@ -5,7 +5,40 @@
 */
 
 
+// Решение, через функции 
+
+int ReverseNumber(int n)
+{
+    int revnumber = 0;
+    for (int i = n; i > 0; i /= 10)
+    {
+        revnumber = revnumber * 10 + i % 10; //Эта функция, создает перевернутое число
+    }
+    return revnumber;
+}
+
+void Polindrom(int n, int j)
+{   
+    if (10000 > n || n > 99999)
+    {
+        System.Console.WriteLine("Число не пятизначное False");
+    }   
+    else if (n == j)                                               //Эта функция, проаверяет, является ли число полиндромом, а также пятизначным числом
+    {
+        System.Console.WriteLine($"{n} True");
+    }
+    else System.Console.WriteLine($"{n} False");
+}
+
 System.Console.WriteLine("Введите пятизначное число ");
+int userNumber = Convert.ToInt32(Console.ReadLine());
+
+int userRevnumber = ReverseNumber(userNumber);
+Polindrom(userNumber, userRevnumber);
+
+
+
+/*System.Console.WriteLine("Введите пятизначное число ");
 int number = Convert.ToInt32(Console.ReadLine());
 int revnumber = 0;
 if (number >= 10000 & number <= 99999)
@@ -21,7 +54,7 @@ if (number >= 10000 & number <= 99999)
     else System.Console.WriteLine($"{number} False");
 }
 else System.Console.WriteLine("Число не пятизначное False");
-
+/*
 
 /*Решение через for еще один вариант
 System.Console.WriteLine("Введите пятизначное число ");

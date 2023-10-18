@@ -3,9 +3,13 @@
 2 -> 1,4
 */
 
+void TableSquares(int n)
+{
+for(int i = 1; i <= n; i++)
+System.Console.Write($"{Math.Pow(i, 2)}, "); 
+}
+
 System.Console.WriteLine("Введите число:");
-int number = Convert.ToInt32(Console.ReadLine());
-for(int i = 1; i <= number; i++)
-System.Console.WriteLine(Math.Pow(i, 2)); 
+int userNumber = Convert.ToInt32(Console.ReadLine());
 
-
+TableSquares(userNumber);
